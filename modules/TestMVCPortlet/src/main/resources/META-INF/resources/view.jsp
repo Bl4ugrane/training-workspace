@@ -1,15 +1,5 @@
 <%@ include file="/init.jsp" %>
 
-<%@page import="java.util.List"%>
-<%@page import="java.text.SimpleDateFormat"%>
-
-<%@page import="javax.portlet.PortletURL"%>
-
-<%@page import="com.liferay.training.portlet.CustomUser"%>
-
-<%@page import="com.liferay.portal.kernel.util.ListUtil"%>
-<%@page import="com.liferay.portal.kernel.util.PortalUtil"%>
-
 <%
 String currentUrl = PortalUtil.getCurrentURL(request);
 List<CustomUser> users = (List<CustomUser>) renderRequest.getAttribute("users");

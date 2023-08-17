@@ -1,10 +1,5 @@
 <%@ include file="/init.jsp" %>
 
-<%@page import="java.text.SimpleDateFormat"%>
-
-<%@page import="com.liferay.training.portlet.CustomUser"%>
-<%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
-
 <%
 String redirect = ParamUtil.getString(request, "backUrl");
 SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy");

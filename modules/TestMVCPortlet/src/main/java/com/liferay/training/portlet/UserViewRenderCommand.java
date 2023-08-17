@@ -1,5 +1,6 @@
 package com.liferay.training.portlet;
 
+import com.liferay.portal.kernel.dao.orm.QueryUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
@@ -59,7 +60,7 @@ public class UserViewRenderCommand implements MVCRenderCommand {
             long[] organizationIds = currentUser.getOrganizationIds();
 
             for (long organizationId : organizationIds) {
-                users.addAll(userLocalService.getOrganizationUsers(organizationId, -1, -1));
+                users.addAll(userLocalService.getOrganizationUsers(organizationId, QueryUtil.ALL_POS, QueryUtil.ALL_POS));
             }
         } catch (Exception exception) {
             log.error("Could not get users: " + exception);
