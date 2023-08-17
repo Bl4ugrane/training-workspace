@@ -7,7 +7,7 @@ public class CustomUser {
 	private Long userId;
 	private String fullName;
 	private String email;
-	private String sex;
+	private boolean isMale;
 	private java.util.Date birthday;
 	private List<String> position;
 	private List<String> phones;
@@ -15,7 +15,7 @@ public class CustomUser {
 	
 	@Override
 	public String toString() {
-		return "CustomUser [userId=" + userId + ", fullName=" + fullName + ", email=" + email + ", sex=" + sex
+		return "CustomUser [userId=" + userId + ", fullName=" + fullName + ", email=" + email + ", isMale=" + isMale
 				+ ", birthday=" + birthday + ", position=" + position + ", phones=" + phones + ", organizations="
 				+ organizations + "]";
 	}
@@ -44,16 +44,12 @@ public class CustomUser {
 		this.email = email;
 	}
 	
+	public void setSex(boolean sex) {
+		this.isMale = sex;
+	}
+	
 	public boolean isMale() {
-		return sex.equals("Male");
-	}
-	
-	public String getSex() {
-		return sex;
-	}
-	
-	public void setSex(String sex) {
-		this.sex = sex;
+		return isMale;
 	}
 		
 	public java.util.Date getBirthday() {
